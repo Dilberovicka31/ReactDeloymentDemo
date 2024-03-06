@@ -1,29 +1,31 @@
 import React from 'react';
 
-function SearchForm(props) {
+function SearchForm() {
   return (
-    <form>
+    <form className="p-5">
       <div className="mb-3">
-        <label htmlFor="search" className="form-label">
-          Search:
+        <label htmlFor="exampleFormControlInput1" className="form-label">
+          Name:
         </label>
         <input
-          onChange={props.handleInputChange}
-          value={props.value}
-          name="search"
-          type="text"
+          type="email"
           className="form-control"
-          placeholder="Search For a Movie"
-          id="search"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
         />
-        <br />
-        <button
-          onClick={props.handleFormSubmit}
-          type="submit"
-          className="btn btn-primary"
-        >
-          Search
-        </button>
+      </div>
+      <div className="mb-4">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
+          Message:
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        />
+      </div>
+      <div className="d-grid gap-2 col-5 mx-auto">
+        <button className="btn btn-outline-secondary text-light">Search</button>
       </div>
     </form>
   );
